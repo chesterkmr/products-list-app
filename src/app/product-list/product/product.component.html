@@ -1,0 +1,37 @@
+<div class="product-wrapper">
+  <mat-card class="product">
+    <div *ngIf="isLoading; else elseBlock" class="product-loader-wrapper">
+      <div class="product-spinner">
+        <mat-spinner diameter="48" class="product-spinner"></mat-spinner>
+      </div>
+    </div>
+    <ng-template #elseBlock>
+      <div class="product-details-content">
+        <mat-card-title class="product-title" [title]="product.name">{{
+          product.name
+        }}</mat-card-title>
+        <mat-card-subtitle>
+          Product description:
+        </mat-card-subtitle>
+        <mat-card-content class="product-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, a.
+        </mat-card-content>
+        <mat-card-footer class="product-footer">
+          <div class="product-categories">
+            <span class="product-categories-text">Category: </span>
+            <mat-chip-list>
+              <mat-chip class="product-categories-chip">
+                <span
+                  class="product-categories-chip-text"
+                  [title]="product.category"
+                >
+                  {{ product.category }}
+                </span>
+              </mat-chip>
+            </mat-chip-list>
+          </div>
+        </mat-card-footer>
+      </div>
+    </ng-template>
+  </mat-card>
+</div>

@@ -1,0 +1,11 @@
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px;
+}
+
+.products-container-item {
+  margin: -12px;
+  padding: 24px;
+  width: calc(33.3% - 24px);
+}

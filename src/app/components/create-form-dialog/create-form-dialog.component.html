@@ -1,0 +1,35 @@
+<div class="product-form-container">
+  <p class="product-form-title">Add new product</p>
+  <form ngNativeValidate (ngSubmit)="handleSubmit()">
+    <div class="product-form-input-group">
+      <mat-form-field>
+        <mat-label>Product name:</mat-label>
+        <input
+          matInput
+          [(ngModel)]="data.name"
+          placeholder="Enter desired product name."
+          name="name"
+          required
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Select category:</mat-label>
+        <select
+          matNativeControl
+          required
+          [(ngModel)]="data.category"
+          name="category"
+        >
+          <option value="">Select a category</option>
+          <option *ngFor="let category of categories">{{
+            category.name
+          }}</option>
+        </select>
+      </mat-form-field>
+    </div>
+    <div class="product-form-controls-group">
+      <button mat-raised-button color="primary" type="submit">Submit</button>
+      <button mat-raised-button (click)="handleCancelClick()">Cancel</button>
+    </div>
+  </form>
+</div>

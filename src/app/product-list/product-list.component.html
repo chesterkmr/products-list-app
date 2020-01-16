@@ -1,0 +1,8 @@
+<div class="products-container">
+  <div class="products-container-item" *ngFor="let product of products">
+    <app-product
+      [product]="product"
+      [isLoading]="product.isSaving"
+    ></app-product>
+  </div>
+</div>

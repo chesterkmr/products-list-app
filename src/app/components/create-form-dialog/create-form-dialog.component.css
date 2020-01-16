@@ -1,0 +1,25 @@
+.product-form-container {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.product-form-title {
+  margin: 12px 0;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.product-form-input-group {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.product-form-controls-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -12px;
+}
+
+.product-form-controls-group button {
+  margin-right: 12px;
+}
